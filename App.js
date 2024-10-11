@@ -15,9 +15,10 @@ export default function App() {
     <NavigationContainer>
       <AppStack.Navigator initialRouteName="Star Wars API">
         <AppStack.Screen name="Characters" component={Characters} />
-				<AppStack.Screen name="CharacterDetail" component={CharactersDetails} />
+        <AppStack.Screen name="CharactersDetails" component={CharactersDetails} />
+        <AppStack.Screen name="Vehicles" component={Vehicles} />
+        <AppStack.Screen name="Films" component={Films} />
 			</AppStack.Navigator>
-    
     </NavigationContainer>
     
   );

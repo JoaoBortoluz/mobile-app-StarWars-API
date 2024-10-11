@@ -4,7 +4,7 @@ import stylesSheet from "../styles/stylesSheet";
 
 export default function CharacterImageComponent({characterName, imageSource, onPress}) {
   return (
-    <TouchableOpacity style={stylesSheet.containerImage}>
+    <TouchableOpacity style={stylesSheet.containerImage} onPress={onPress}>
       <View style={stylesSheet.containerViewImage}>
         <Image style={stylesSheet.imageStyle}
             source={imageSource}/>
