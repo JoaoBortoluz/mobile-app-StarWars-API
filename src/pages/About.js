@@ -4,9 +4,15 @@ import React from 'react';
 export default function About() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>About</Text>
+      <Text style={styles.title}>About the Developers</Text>
       <Text style={styles.description}>
-        This is the About page. Here, you can add information about your application, its purpose, and any other relevant details.
+        João Vítor Bortoluz da Rosa - RA: 1134776
+      </Text>
+      <Text style={styles.description}>
+        Ana Flávia Florencio - RA: 1134228
+      </Text>
+      <Text style={styles.description}>
+        Luiz Henrique Albuquerque - RA: 1134362
       </Text>
     </View>
   );

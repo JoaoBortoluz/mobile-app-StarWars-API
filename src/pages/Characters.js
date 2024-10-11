@@ -26,8 +26,6 @@ export default function Characters() {
       setCharacter(characterResponse);
       if (characterResponse) {
         navigation.navigate('CharactersDetails', { character: characterResponse });
-      } else {
-        console.log('Character not found');
       }
     } catch (error) {
       console.error('Error when searching for character:', error);

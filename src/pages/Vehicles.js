@@ -20,22 +20,29 @@ export default function Vehicles({ route }) {
   }
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>{character.name} Vehicles:</Text>
-      {vehiclesHandle()}
+    <ScrollView contentContainerStyle={styles.scrollContent}>
+      <View style={styles.container}>
+        <Text style={styles.title}>{character.name} Vehicles:</Text>
+        {vehiclesHandle()}
+      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollContent: {
+    flexGrow: 1,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#333',
+    height: '100%',
   },
   title: {
+    color: "#ffffff",
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,

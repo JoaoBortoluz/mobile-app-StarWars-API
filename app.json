@@ -4,10 +4,10 @@
     "slug": "Stars Wars api",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": ".src/assets/icon.png",
+    "icon": ".src/assets/icon",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": ".src/assets/splash.png",
+      "image": "../assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,7 +21,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": ".src/assets/favicon.png"
     }
   }
 }
