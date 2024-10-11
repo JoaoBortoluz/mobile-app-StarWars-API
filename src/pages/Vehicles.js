@@ -8,24 +8,63 @@ export default function Vehicles({ route }) {
     if (vehicles.length > 0) {
       return vehicles.map((vehicle, index) => (
         <View key={index} style={styles.vehicleContainer}>
-          <Text>Name: {vehicle.name}</Text>
-          <Text>Model: {vehicle.model}</Text>
-          <Text>Manufacturer: {vehicle.manufacturer}</Text>
-          <Text>Cost: {vehicle.cost_in_credits} credits</Text>
-          <Text></Text>
+          <Text style={styles.vehicleTitle}>Name: {vehicle.name}</Text>
+          <Text style={styles.vehicleDetail}>Model: {vehicle.model}</Text>
+          <Text style={styles.vehicleDetail}>Manufacturer: {vehicle.manufacturer}</Text>
+          <Text style={styles.vehicleDetail}>Cost: {vehicle.cost_in_credits} credits</Text>
         </View>
       ));
     } else {
-      return <Text>{character.name} has no vehicles.</Text>;
+      return <Text style={styles.noVehiclesText}>{character.name} has no vehicles.</Text>;
     }
   }
 
   return (
-    <ScrollView>
-      <Text>{character.name} Vehicles:</Text>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.title}>{character.name} Vehicles:</Text>
       {vehiclesHandle()}
     </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#f5f5f5',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  vehicleContainer: {
+    marginBottom: 20,
+    padding: 15,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  vehicleTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  vehicleDetail: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  noVehiclesText: {
+    fontSize: 18,
+    color: '#ff0000',
+  },
+});
